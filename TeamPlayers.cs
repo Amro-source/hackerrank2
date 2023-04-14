@@ -85,11 +85,21 @@ namespace Solution {
             str = Console.ReadLine();
             count = Convert.ToInt32(str);
             Console.WriteLine("Current number of players in team " + teamObj.teamName + " is " + teamObj.noOfPlayers);
-            var res = teamObj.RemovePlayer(count);
-            if (res) {
-                Console.WriteLine("New number of players in team " + teamObj.teamName + " is " + teamObj.noOfPlayers);
-            } else {
-                Console.WriteLine("Number of players in team " + teamObj.teamName + " remains same");
+            
+            // Get the current number of players before removing
+                int current = teamObj.noOfPlayers;
+
+            // Remove the player without assigning anything
+                teamObj.RemovePlayer(count);
+
+            // Check if the number of players has changed
+        if (teamObj.noOfPlayers < current)
+            {
+                    Console.WriteLine("New number of players in team " + teamObj.teamName + " is " + teamObj.noOfPlayers);
+            }
+            else
+            {
+            Console.WriteLine("Number of players in team " + teamObj.teamName + " remains same");
             }
             
             str = Console.ReadLine();
