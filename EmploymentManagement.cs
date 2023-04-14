@@ -5,17 +5,11 @@ using System.Linq;
 
 namespace Solution
 {
-    public class Solution
+    public class EmployeesManagement
     {
 
 
-    // Employee class
-    public class Employee
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Company { get; set; }
-}
+
 
 
     // List of employees
